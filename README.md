@@ -1,24 +1,13 @@
-# README
+# Rails Authentication
+The aim of this project was to build a page where new users can sign-up and create new posts. Both logged in and logged out users can see these posts, however, only logged in users can see the authors of the posts.
+You can see the full instructions on [the Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Used**
+* Rails
+* Ruby
+* HTML
+* Bootstrap
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**Authors**
+### [Eva Aleksandra Veskova Jackson](https://github.com/evaveskova/).
+### [Nyaga Roy](https://github.com/RoyNyaga).
