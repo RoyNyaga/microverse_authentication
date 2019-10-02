@@ -21,9 +21,10 @@ class User < ApplicationRecord
 	      end
 	  end
 
-	  def remember
+	 def remember
       self.remember_token = User.new_token
       update_attribute(:remember_digest, User.digest(remember_token)) # creates a digest of the remember me token before saving in the database
     end
+
 
 end
