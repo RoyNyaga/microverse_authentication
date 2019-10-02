@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
   attr_accessor :remember_token
 
-  before_action [:create]
-
   def index
     @user = User.all
   end 
@@ -19,8 +17,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to Nyaga Andre Roy's App"
-      redirect_to @user
+      flash[:success] = "Welcome, sign up successful"
+      redirect_to posts_path
     else
       render :new
     end 

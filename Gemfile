@@ -68,7 +68,8 @@ gem 'bootstrap', '~> 4.3.1'
 # jQuery gem
 gem 'jquery-rails'
 
-
+gem 'will_paginate', '~> 3.1', '>= 3.1.8'
+gem 'bootstrap-will_paginate', '~> 1.0'
 
 
 

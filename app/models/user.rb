@@ -10,6 +10,11 @@ class User < ApplicationRecord
 
     has_secure_password
     validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+	
+	def downcase_email
+      self.email.downcase
+    end 
+
 
 	class << self
 
@@ -29,5 +34,15 @@ class User < ApplicationRecord
       update_attribute(:remember_digest, User.digest(remember_token)) # creates a digest of the remember me token before saving in the database
     end
 
+    # Forgets a user.
+  def forget
+    update_attribute(:remember_digest, nil)
+  end
+
+    # Returns true if the given token matches the digest.
+  def authenticated?(remember_token)
+    return false if remember_digest.nil?
+    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  end
 
 end
