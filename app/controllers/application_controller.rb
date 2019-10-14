@@ -56,14 +56,6 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def display_name?
-    if current_user.nil?
-      false
-    else
-      true
-    end
-  end
-
   # Redirects to stored location (or to the default).
   def redirect_back_or(default)
     redirect_to(session[:forwarding_url] || default)
