@@ -48,6 +48,7 @@ class ApplicationController < ActionController::Base
   private
 
   # Confirms a logged-in user.
+  # rubocop:disable Style/GuardClause
   def logged_in_user
     unless logged_in?
       store_location
@@ -55,6 +56,7 @@ class ApplicationController < ActionController::Base
       redirect_to login_url
     end
   end
+  # rubocop:enable Style/GuardClause
 
   # Redirects to stored location (or to the default).
   def redirect_back_or(default)

@@ -1,11 +1,10 @@
 <div class="container">
 	<h1>Posts</h1>
-    <% @post.each do |post| %>       
+    <% @post.each do |post| %>
           <h2>
-            <small><%= post.content %></small><% if display_name? %>
-            Author:<%= post.user.name %>             
+            <small id= "post-content"><%= post.content %></small><small id= "post-author"><% if display_name? %>
+            Author:<%= post.user.name %></small>
             </h2>
         <% end %>
     <% end %>
 </div>
-
